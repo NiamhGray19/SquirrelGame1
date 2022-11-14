@@ -1,5 +1,4 @@
 /*
-* An SFML application using a vector list to store point data - Darryl Charles
 * SFML Documentation https://www.sfml-dev.org/documentation/2.5.1/
 * About sprites and shapes https://www.sfml-dev.org/tutorials/2.5/graphics-sprite.php
 * Set up your own VS2019 project https://www.youtube.com/watch?v=lFzpkvrscs4
