@@ -24,7 +24,7 @@
     <ProjectGuid>{A34CE76A-1C20-4FEC-8DBC-7D2F7B3EB31B}</ProjectGuid>
     <RootNamespace>MakeItSnow</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Example_1</ProjectName>
+    <ProjectName>SpriteAnimation</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
