@@ -14,6 +14,9 @@
 #define winWidth 800
 #define winHeight 600
 
+enum DragonDirection {down, up, right, left};
+enum Level { start, level1, level2, end };
+
 int main()
 {
     // create the window
@@ -31,6 +34,11 @@ int main()
     tex_Dragon.loadFromFile("dragon.png");
     sf::IntRect rectSourceSprite(0, 0, 100, 100);
     sf::Sprite spr_dragon(tex_Dragon, rectSourceSprite);
+    spr_dragon.setOrigin(50,50);
+    spr_dragon.setPosition(winWidth/2, winHeight/2);
+    spr_dragon.setScale(3.0, 3.0);
+
+    DragonDirection dragonDirection = down;
 
     sf::Clock deltaClock;
     sf::Time elapsedTime;
@@ -44,8 +52,22 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        dragonDirection = up;
+        if (deltaClock.getElapsedTime().asSeconds() > 0.3f) {
+            switch (dragonDirection)
+            {
+                case down :
+                {
+                    rectSourceSprite.top = 0;
+                    break;
+                }
+                case up : 
+                {
+                    rectSourceSprite.top = 300;
+                    break;
+                }
+            }
 
-        if (deltaClock.getElapsedTime().asSeconds() > 0.5f) {
             if (rectSourceSprite.left == 200)
                 rectSourceSprite.left = 0;
             else
